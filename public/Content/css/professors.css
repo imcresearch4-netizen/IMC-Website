@@ -1,0 +1,233 @@
+/* FACULTY & ALUMNI - PREMIUM STYLES */
+
+/* PAGE HEADER */
+.pageheader-container {
+    padding: 30px 0 10px !important;
+}
+.pageheader-container #typing {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    background: linear-gradient(135deg, #01153e, #c5a55a) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* PROFESSOR CARD */
+.professor-row {
+    margin-bottom: 24px !important;
+    padding: 28px !important;
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(1,21,62,0.06) !important;
+    box-shadow: 0 4px 20px rgba(1,21,62,0.06) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    animation: profFadeUp 0.6s ease both !important;
+}
+.professor-row::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 4px !important;
+    height: 100% !important;
+    background: linear-gradient(180deg, #c5a55a, #01153e) !important;
+    border-radius: 16px 0 0 16px !important;
+    opacity: 0 !important;
+    transition: opacity 0.4s ease !important;
+}
+.professor-row:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 36px rgba(1,21,62,0.1), 0 0 20px rgba(197,165,90,0.06) !important;
+    border-color: rgba(197,165,90,0.15) !important;
+}
+.professor-row:hover::before {
+    opacity: 1 !important;
+}
+.professor-row:nth-child(2) { animation-delay: 0.1s !important; }
+.professor-row:nth-child(3) { animation-delay: 0.2s !important; }
+.professor-row:nth-child(4) { animation-delay: 0.3s !important; }
+
+@keyframes profFadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* PROFESSOR IMAGE */
+.prof-img-container {
+    border-radius: 12px 0 0 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    padding: 8px;
+}
+.prof-img-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    border: 3px solid #c5a55a !important;
+    border-radius: 12px !important;
+    background: none !important;
+    background-image: none !important;
+    background-origin: unset !important;
+    background-clip: unset !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+    box-shadow: 0 0 12px rgba(197,165,90,0.3) !important;
+}
+.professor-row:hover .prof-img-container img {
+    transform: scale(1.03) !important;
+    box-shadow: 0 0 20px rgba(197,165,90,0.5) !important;
+}
+
+/* PROFESSOR INFO */
+.professor-info p {
+    margin-bottom: 8px !important;
+    line-height: 1.6 !important;
+    color: #444 !important;
+    font-size: 0.92rem !important;
+}
+.professor-info p i {
+    width: 20px !important;
+    color: #c5a55a !important;
+    margin-right: 6px !important;
+}
+.professor-info a {
+    color: #01153e !important;
+    text-decoration: none !important;
+    border-bottom: 1px dashed rgba(1,21,62,0.2) !important;
+    transition: all 0.3s ease !important;
+}
+.professor-info a:hover {
+    color: #c5a55a !important;
+    border-bottom-color: #c5a55a !important;
+}
+.professor-name {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: #01153e !important;
+    margin-bottom: 6px !important;
+}
+
+/* SECTION HEADINGS */
+.professor-row + h3,
+h3.mt-5 {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700 !important;
+    color: #01153e !important;
+    position: relative !important;
+}
+
+/* BUTTONS */
+.btn-outline-custom {
+    color: #01153e !important;
+    border: 1.5px solid rgba(1,21,62,0.2) !important;
+    border-radius: 24px !important;
+    padding: 6px 16px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background: transparent !important;
+}
+.btn-outline-custom:hover {
+    background: linear-gradient(135deg, #01153e, #0a1f44) !important;
+    color: #ffffff !important;
+    border-color: #01153e !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(1,21,62,0.2) !important;
+}
+.btn-faculty {
+    margin-right: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+/* ALUMNI CARD */
+.alumni-card {
+    background: #ffffff !important;
+    border-radius: 14px !important;
+    padding: 18px 20px !important;
+    border: 1px solid rgba(1,21,62,0.06) !important;
+    box-shadow: 0 2px 12px rgba(1,21,62,0.05) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    height: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+.alumni-card::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #c5a55a, #01153e) !important;
+    transform: scaleX(0) !important;
+    transform-origin: left !important;
+    transition: transform 0.4s ease !important;
+}
+.alumni-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 28px rgba(1,21,62,0.1), 0 0 16px rgba(197,165,90,0.06) !important;
+    border-color: rgba(197,165,90,0.15) !important;
+}
+.alumni-card:hover::after {
+    transform: scaleX(1) !important;
+}
+.alumni-card h5,
+.alumni-card h6 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+}
+.alumni-card .img-fluid.rounded-circle {
+    border: 2px solid transparent !important;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #c5a55a, #01153e) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    transition: transform 0.3s ease !important;
+}
+.alumni-card:hover .img-fluid.rounded-circle {
+    transform: scale(1.08) !important;
+}
+
+/* ALUMNI SECTION DIVIDER */
+hr[style*="border-top: 2px solid #c5a55a"] {
+    position: relative !important;
+    border: none !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, #c5a55a 20%, #c5a55a 80%, transparent) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .professor-row {
+        padding: 18px !important;
+        text-align: center !important;
+    }
+    .prof-img-container {
+        border-radius: 12px 12px 0 0;
+        min-height: 250px;
+        padding: 6px;
+    }
+    .prof-img-container img {
+        width: 100% !important;
+        height: 100% !important;
+        object-position: center !important;
+        border-radius: 12px !important;
+        border: 2px solid #c5a55a !important;
+        box-shadow: 0 0 10px rgba(197,165,90,0.25) !important;
+    }
+    .professor-name {
+        font-size: 1.15rem !important;
+    }
+    .pageheader-container #typing {
+        font-size: 1.6rem !important;
+    }
+    .btn-faculty {
+        margin-bottom: 6px !important;
+    }
+}

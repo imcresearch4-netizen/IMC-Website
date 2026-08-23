@@ -1,0 +1,216 @@
+/* STUDENTS PAGE - PREMIUM STYLES */
+
+/* TABS ENHANCEMENT */
+#tabs {
+    border: none !important;
+    background: transparent !important;
+}
+#tabs > ul {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    margin-bottom: 30px !important;
+    border-bottom: 2px solid rgba(1,21,62,0.08) !important;
+    padding-bottom: 12px !important;
+}
+#tabs > ul > li {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    float: none !important;
+}
+#tabs > ul > li > a {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    color: #666 !important;
+    padding: 10px 22px !important;
+    border-radius: 24px !important;
+    border: 1.5px solid transparent !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    text-decoration: none !important;
+}
+#tabs > ul > li > a:hover {
+    color: #01153e !important;
+    border-color: rgba(197,165,90,0.3) !important;
+    background: rgba(197,165,90,0.06) !important;
+}
+#tabs .ui-tabs-active > a,
+#tabs .ui-state-active > a,
+#tabs .ui-state-active > a:hover {
+    background: linear-gradient(135deg, #01153e, #0a1f44) !important;
+    color: #c5a55a !important;
+    border-color: #01153e !important;
+    box-shadow: 0 4px 16px rgba(1,21,62,0.2) !important;
+    font-weight: 700 !important;
+}
+#tabs .ui-state-active {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+div[id^="tabs-"] {
+    min-height: 100px !important;
+    padding: 10px 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* TAB CONTENT HEADER */
+div[id^="tabs-"] .pageheader-container {
+    padding: 0 0 15px 0 !important;
+}
+div[id^="tabs-"] .pageheader-container #typing {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #01153e, #c5a55a) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* STUDENT ROW CARD */
+.student-row {
+    margin-bottom: 20px !important;
+    padding: 22px !important;
+    background: #ffffff !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(1,21,62,0.06) !important;
+    box-shadow: 0 3px 16px rgba(1,21,62,0.05) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    animation: studentFadeUp 0.5s ease both !important;
+}
+.student-row::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 4px !important;
+    height: 100% !important;
+    background: linear-gradient(180deg, #c5a55a, #01153e) !important;
+    opacity: 0 !important;
+    transition: opacity 0.4s ease !important;
+}
+.student-row:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 30px rgba(1,21,62,0.08), 0 0 16px rgba(197,165,90,0.05) !important;
+    border-color: rgba(197,165,90,0.12) !important;
+}
+.student-row:hover::before {
+    opacity: 1 !important;
+}
+.student-row:nth-child(odd) { animation-delay: 0.05s !important; }
+.student-row:nth-child(even) { animation-delay: 0.1s !important; }
+
+@keyframes studentFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* STUDENT IMAGE */
+.student-image {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover !important;
+    border: 2.5px solid transparent !important;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #c5a55a, #01153e) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    transition: all 0.4s ease !important;
+    filter: drop-shadow(0 3px 10px rgba(1,21,62,0.1)) !important;
+}
+.student-row:hover .student-image {
+    transform: scale(1.08) !important;
+    filter: drop-shadow(0 5px 16px rgba(197,165,90,0.2)) !important;
+}
+
+/* STUDENT INFO TABLE */
+.div-record {
+    margin-bottom: 3px !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+.div-record .bg-custom {
+    background: #ffffff !important;
+    font-weight: 500 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.01em !important;
+    border-radius: 6px 0 0 6px !important;
+    padding: 8px 14px !important;
+    color: #01153e !important;
+}
+.div-record .bg-secondary {
+    background: linear-gradient(135deg, #e9ecef, #dee2e6) !important;
+    font-weight: 700 !important;
+    font-size: 0.72rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    color: #01153e !important;
+    border-radius: 0 6px 6px 0 !important;
+    padding: 8px 12px !important;
+}
+
+/* STUDENT NAME HIGHLIGHT */
+.student-name {
+    font-weight: 600 !important;
+}
+.div-record:first-child .bg-custom {
+    font-weight: 700 !important;
+    font-size: 0.92rem !important;
+    background: #ffffff !important;
+    color: #01153e !important;
+}
+
+/* ALUMNI ROW */
+.alumni-row {
+    margin-bottom: 20px !important;
+    padding: 18px !important;
+    background: #ffffff !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(1,21,62,0.06) !important;
+    box-shadow: 0 2px 12px rgba(1,21,62,0.04) !important;
+    transition: all 0.35s ease !important;
+}
+.alumni-row:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 24px rgba(1,21,62,0.08) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    #tabs > ul {
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+    }
+    #tabs > ul > li > a {
+        font-size: 0.78rem !important;
+        padding: 8px 14px !important;
+    }
+    .student-row {
+        padding: 16px !important;
+        text-align: center !important;
+    }
+    .student-image {
+        width: 70px !important;
+        height: 70px !important;
+        margin-bottom: 10px !important;
+    }
+    .div-record .bg-custom,
+    .div-record .bg-secondary {
+        font-size: 0.78rem !important;
+        padding: 6px 10px !important;
+    }
+}

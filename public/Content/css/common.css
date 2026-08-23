@@ -1,0 +1,141 @@
+/* Color Used : #333a56 */
+
+body {
+    min-height: 100%;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Border appears around button when clicked */
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+/* typing text style */
+
+
+.pageheader-container > #typing {
+    font-size: 30px;
+    color: #333a56;
+    font-weight: bold;
+}
+
+
+/* For Dropdown Navbar */
+.dropdown-menu {
+    color: #333a56;
+    background: rgba(255,255,255,0.7);
+}
+
+    .dropdown-menu > .dropdown-item:hover {
+        color: white;
+        background-color: #333a56;
+    }
+
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+
+/* For Divs with Rounded Corners */
+.div-roundCorners {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: larger;
+    text-align: center;
+    background-color: #333a56 !important;
+    color: white;
+}
+
+/* For background color of Title and Padding Respectively */
+
+.divTopHeader {
+    background-color: #333a56 !important;
+}
+
+    .divTopHeader h3 {
+        padding: 1%;
+    }
+
+/* Research paper CSS, divPapers contains row records, spanPaperName and spanItalic are italic texts */
+
+div.divPapers {
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-family: 'Open Sans';
+}
+
+span.spanPaperNames {
+    /*font-style: italic;*/
+    color: gray;
+}
+
+span.spanItalic {
+    font-style: italic;
+}
+
+/* Used for Styling each Project Detail */
+
+div.oTitle {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333a56
+}
+
+div.oTDuration, div.oTSupported, div.oTProjDes {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333a56
+}
+
+.bg-custom {
+    background-color: #333a56
+}
+
+.bg-custom-carousel {
+    background-color: rgba(51,58,86,0.6);
+}
+
+/* Custom Color for texts */
+
+.text-custom {
+    color: #333a56;
+}
+
+.text-custom1 {
+    font-size: 13px;
+    color: #333a56;
+}
+/* Style for selected button in Side Tabs |Publications etc. */
+
+.btn-custom {
+    background-color: #333a56 !important;
+}
+
+.btn-custom-menu {
+    background-color: rgba(51,58,86,0.8) !important;
+}
+
+/* Footer Style */
+.footer {
+    margin-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: linear-gradient(135deg, #01153e 0%, #0a1f44 50%, #01153e 100%);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(197, 165, 90, 0.15);
+}
+
+    .footer .imc-copyright {
+        margin-top: 20px;
+    }

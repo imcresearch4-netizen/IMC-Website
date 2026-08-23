@@ -1,0 +1,153 @@
+
+> imc-nextjs@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.0 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.246.183.129:3001
+✓ Ready in 1859ms
+✓ Running next.config.ts took 122ms
+
+ GET / 200 in 2.3s (next.js: 1514ms, application-code: 816ms)
+ GET /labs/imc/projects/7 200 in 3.2s (next.js: 2.9s, application-code: 295ms)
+ GET /labs/imc/projects/1 200 in 235ms (next.js: 27ms, application-code: 208ms)
+ GET /labs/imc1/projects/7 200 in 338ms (next.js: 31ms, application-code: 307ms)
+ GET /labs/imc2/projects/16 200 in 266ms (next.js: 17ms, application-code: 250ms)
+ GET /labs/imc2/projects/20 200 in 218ms (next.js: 13ms, application-code: 206ms)
+ GET /labs/imc3/projects/7 200 in 219ms (next.js: 27ms, application-code: 192ms)
+ GET /labs/imc4/projects/13 200 in 190ms (next.js: 13ms, application-code: 178ms)
+ GET /labs/imc4/projects/21 200 in 201ms (next.js: 15ms, application-code: 186ms)
+ GET /labs/imc5/projects/12 200 in 225ms (next.js: 13ms, application-code: 212ms)
+ GET /labs/imc5/projects/16 200 in 225ms (next.js: 31ms, application-code: 194ms)
+ GET /labs/imc/projects/7 200 in 295ms (next.js: 39ms, application-code: 256ms)
+ GET /labs/imc4/projects/13 200 in 168ms (next.js: 13ms, application-code: 154ms)
+ GET /labs/imc5/projects/16 200 in 159ms (next.js: 13ms, application-code: 146ms)
+ GET /labs/imc2/projects/20 200 in 181ms (next.js: 13ms, application-code: 168ms)
+ GET /labs/imc1/projects/6 200 in 252ms (next.js: 26ms, application-code: 226ms)
+ GET / 200 in 225ms (next.js: 14ms, application-code: 211ms)
+ GET /labs/imc1/projects/7 200 in 254ms (next.js: 36ms, application-code: 218ms)
+ GET /labs/imc1/projects/6 200 in 188ms (next.js: 15ms, application-code: 173ms)
+ GET /labs/imc4/projects/13 200 in 192ms (next.js: 15ms, application-code: 177ms)
+ GET /labs/imc3/projects/12 200 in 174ms (next.js: 13ms, application-code: 161ms)
+ GET /labs/imc5/projects/16 200 in 253ms (next.js: 26ms, application-code: 227ms)
+ GET / 200 in 480ms (next.js: 30ms, application-code: 451ms)
+ GET /labs/imc/projects/7 200 in 123ms (next.js: 38ms, application-code: 85ms)
+ GET /labs/imc4/projects/13 200 in 241ms (next.js: 70ms, application-code: 171ms)
+ GET /labs/imc1/projects/6 200 in 180ms (next.js: 50ms, application-code: 131ms)
+ GET / 200 in 142ms (next.js: 18ms, application-code: 124ms)
+ GET / 200 in 104ms (next.js: 29ms, application-code: 75ms)
+ GET /alumni 200 in 932ms (next.js: 513ms, application-code: 419ms)
+ GET /alumni 200 in 213ms (next.js: 18ms, application-code: 195ms)
+ GET / 200 in 310ms (next.js: 20ms, application-code: 290ms)
+ GET /alumni 200 in 134ms (next.js: 30ms, application-code: 104ms)
+ GET /alumni 200 in 152ms (next.js: 37ms, application-code: 115ms)
+ GET /alumni 200 in 100ms (next.js: 27ms, application-code: 72ms)
+ GET /alumni 200 in 207ms (next.js: 30ms, application-code: 177ms)
+ GET /alumni 200 in 243ms (next.js: 23ms, application-code: 220ms)
+✓ Compiled in 109ms
+ GET /alumni 200 in 176ms (next.js: 47ms, application-code: 128ms)
+ GET /alumni 200 in 290ms (next.js: 27ms, application-code: 263ms)
+ GET / 200 in 121ms (next.js: 45ms, application-code: 75ms)
+ GET / 200 in 90ms (next.js: 13ms, application-code: 77ms)
+ GET /hall-of-fame 200 in 466ms (next.js: 274ms, application-code: 192ms)
+ GET / 200 in 199ms (next.js: 22ms, application-code: 177ms)
+ GET /hall-of-fame 200 in 49ms (next.js: 12ms, application-code: 37ms)
+✓ Compiled in 144ms
+ GET /hall-of-fame 200 in 72ms (next.js: 18ms, application-code: 54ms)
+✓ Compiled in 55ms
+ GET /hall-of-fame 200 in 94ms (next.js: 18ms, application-code: 77ms)
+ GET / 200 in 184ms (next.js: 61ms, application-code: 123ms)
+ GET /gallery 200 in 249ms (next.js: 170ms, application-code: 79ms)
+ GET /news 200 in 935ms (next.js: 872ms, application-code: 63ms)
+✓ Compiled in 269ms
+ GET /news 200 in 103ms (next.js: 25ms, application-code: 78ms)
+✓ Compiled in 59ms
+ GET /news 200 in 93ms (next.js: 19ms, application-code: 74ms)
+ GET / 200 in 139ms (next.js: 12ms, application-code: 128ms)
+✓ Compiled in 50ms
+ GET /news 200 in 101ms (next.js: 20ms, application-code: 82ms)
+ GET / 200 in 144ms (next.js: 13ms, application-code: 131ms)
+✓ Compiled in 55ms
+ GET /news 200 in 106ms (next.js: 17ms, application-code: 89ms)
+ GET / 200 in 151ms (next.js: 15ms, application-code: 135ms)
+ GET / 200 in 150ms (next.js: 6ms, application-code: 144ms)
+ GET / 200 in 144ms (next.js: 8ms, application-code: 136ms)
+ GET / 200 in 141ms (next.js: 7ms, application-code: 134ms)
+ GET / 200 in 167ms (next.js: 11ms, application-code: 156ms)
+ GET / 200 in 48ms (next.js: 13ms, application-code: 36ms)
+✓ Compiled in 150ms
+ GET / 200 in 133ms (next.js: 42ms, application-code: 91ms)
+✓ Compiled in 154ms
+ GET / 200 in 83ms (next.js: 23ms, application-code: 60ms)
+✓ Compiled in 167ms
+ GET / 200 in 119ms (next.js: 32ms, application-code: 87ms)
+✓ Compiled in 139ms
+ GET / 200 in 216ms (next.js: 131ms, application-code: 85ms)
+✓ Compiled in 157ms
+ GET / 200 in 86ms (next.js: 20ms, application-code: 67ms)
+✓ Compiled in 142ms
+ GET / 200 in 117ms (next.js: 35ms, application-code: 81ms)
+✓ Compiled in 59ms
+ GET / 200 in 63ms (next.js: 18ms, application-code: 45ms)
+ GET / 200 in 147ms (next.js: 7ms, application-code: 140ms)
+ GET /news 200 in 54ms (next.js: 16ms, application-code: 38ms)
+ GET /gallery 200 in 51ms (next.js: 18ms, application-code: 34ms)
+ GET /hall-of-fame 200 in 59ms (next.js: 22ms, application-code: 37ms)
+✓ Compiled in 134ms
+ GET /hall-of-fame 200 in 93ms (next.js: 34ms, application-code: 60ms)
+✓ Compiled in 69ms
+ GET /hall-of-fame 200 in 57ms (next.js: 14ms, application-code: 44ms)
+✓ Compiled in 100ms
+ GET /hall-of-fame 200 in 87ms (next.js: 18ms, application-code: 69ms)
+✓ Compiled in 129ms
+ GET /hall-of-fame 200 in 55ms (next.js: 8ms, application-code: 48ms)
+✓ Compiled in 148ms
+ GET /hall-of-fame 200 in 91ms (next.js: 22ms, application-code: 68ms)
+✓ Compiled in 146ms
+ GET /hall-of-fame 200 in 61ms (next.js: 10ms, application-code: 51ms)
+✓ Compiled in 168ms
+ GET /hall-of-fame 200 in 53ms (next.js: 10ms, application-code: 43ms)
+ GET / 200 in 156ms (next.js: 8ms, application-code: 148ms)
+ GET / 200 in 54ms (next.js: 13ms, application-code: 41ms)
+ GET /hall-of-fame 200 in 75ms (next.js: 17ms, application-code: 58ms)
+ GET /open-source-code 200 in 714ms (next.js: 662ms, application-code: 53ms)
+ GET /datasets 200 in 492ms (next.js: 434ms, application-code: 59ms)
+ GET /projects 200 in 247ms (next.js: 193ms, application-code: 53ms)
+ GET /gallery 200 in 120ms (next.js: 43ms, application-code: 78ms)
+ GET / 200 in 45ms (next.js: 17ms, application-code: 28ms)
+ GET /hall-of-fame 200 in 73ms (next.js: 30ms, application-code: 43ms)
+ GET /members/students?tab=ra 200 in 965ms (next.js: 908ms, application-code: 57ms)
+ GET /alumni 200 in 52ms (next.js: 18ms, application-code: 34ms)
+ GET /hall-of-fame 200 in 39ms (next.js: 9ms, application-code: 30ms)
+ GET /alumni 200 in 80ms (next.js: 29ms, application-code: 50ms)
+ GET /join-us 200 in 415ms (next.js: 348ms, application-code: 68ms)
+ GET /members/students?tab=ra 200 in 102ms (next.js: 43ms, application-code: 59ms)
+ GET /members/students?tab=ra 200 in 88ms (next.js: 17ms, application-code: 71ms)
+✓ Compiled in 61ms
+ GET /members/students?tab=ra 200 in 109ms (next.js: 24ms, application-code: 85ms)
+ GET /alumni 200 in 50ms (next.js: 17ms, application-code: 33ms)
+✓ Compiled in 70ms
+ GET /alumni 200 in 98ms (next.js: 16ms, application-code: 82ms)
+ GET /members/students?tab=ra 200 in 68ms (next.js: 20ms, application-code: 48ms)
+ GET /alumni 200 in 43ms (next.js: 9ms, application-code: 35ms)
+✓ Compiled in 66ms
+ GET /alumni 200 in 130ms (next.js: 19ms, application-code: 110ms)
+ GET /members/students?tab=ra 200 in 57ms (next.js: 20ms, application-code: 37ms)
+ GET /members/professors 200 in 740ms (next.js: 684ms, application-code: 55ms)
+ GET / 200 in 53ms (next.js: 22ms, application-code: 31ms)
+ GET /members/professors 200 in 74ms (next.js: 25ms, application-code: 49ms)
+✓ Compiled in 219ms
+ GET /members/professors 200 in 117ms (next.js: 21ms, application-code: 96ms)
+ GET / 200 in 53ms (next.js: 20ms, application-code: 32ms)
+ GET / 200 in 29ms (next.js: 13ms, application-code: 15ms)
+ GET / 200 in 48ms (next.js: 13ms, application-code: 34ms)
+ GET /labs/imc4/projects/13 200 in 450ms (next.js: 250ms, application-code: 200ms)
+ GET /labs/imc5/projects/12 200 in 135ms (next.js: 60ms, application-code: 75ms)
+✓ Compiled in 152ms
+ GET /labs/imc5/projects/12 200 in 174ms (next.js: 61ms, application-code: 113ms)
+ GET /labs/imc5/projects/12 200 in 317ms (next.js: 58ms, application-code: 259ms)
+✓ Compiled in 161ms
+ GET /labs/imc5/projects/12 200 in 245ms (next.js: 65ms, application-code: 180ms)
+✓ Compiled in 135ms
+ GET /labs/imc5/projects/12 200 in 389ms (next.js: 73ms, application-code: 316ms)
+ GET / 200 in 130ms (next.js: 39ms, application-code: 91ms)

@@ -1,0 +1,23 @@
+.project-holder {
+    text-decoration: none;
+}
+.project-holder:hover {
+    text-decoration: none;
+}
+.project-row {
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.project-cover {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+.proj-auth {
+    font-weight: bold;
+    margin-top: 10px;
+}

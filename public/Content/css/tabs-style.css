@@ -1,0 +1,23 @@
+﻿/* TABS STYLE - PREMIUM */
+#tabs .ui-state-active {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+div[id^="tabs-"] {
+    min-height: 100px !important;
+    padding: 10px 0 !important;
+}
+
+.ui-draggable, .ui-droppable {
+    background-position: top;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align: center !important;
+}

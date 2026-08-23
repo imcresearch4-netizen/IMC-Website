@@ -1,0 +1,8 @@
+# Heavy media lives on Google Drive (URLs baked into lib/data/externalMedia.ts).
+# Keep local tooling out of the Vercel build.
+EXTERNAL_UPLOAD/
+UPLOAD_READY/
+.opencode/
+*.tsbuildinfo
+node_modules/
+.next/
