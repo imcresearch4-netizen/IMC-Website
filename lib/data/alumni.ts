@@ -158,7 +158,7 @@ export const alumni: Alumni[] = [
     "name": "Sara Mumtaz",
     "degree": "Master's in Computer Science",
     "year": 0,
-    "photo": "/Content/images/members/alumni/alumni_16.webp",
+    "photo": "/Content/images/members/alumni/sara_mumtaz.jpeg",
     "current_position": "Deep Learning-based Leaf Classification and Disease Detection for Sustainable Plant Species Analysis",
     "link": "https://www.researchgate.net/profile/Sara-Mumtaz-2",
     "sort_order": 16

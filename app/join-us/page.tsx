@@ -1,6 +1,12 @@
-import { SITE } from "@/config/site";
+"use client";
+
+import { useState } from "react";
+import StudentForm from "@/components/join-us/StudentForm";
+import CollaboratorForm from "@/components/join-us/CollaboratorForm";
 
 export default function JoinUsPage() {
+  const [activeTab, setActiveTab] = useState<"student" | "collaborator">("student");
+
   return (
     <>
       <div className="container pageheader-container join-pageheader">
@@ -10,61 +16,54 @@ export default function JoinUsPage() {
       <div className="container page-content">
         <div className="row mt-4">
           <div className="col-md-10 mx-auto">
-            <div className="text-center mb-5"></div>
-            <div className="row">
-              <div className="col-md-6 mb-4">
-                <a
-                  href={SITE.join.student}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none", display: "block" }}
-                >
-                  <div className="join-option-card wow-card">
-                    <i className="fas fa-graduation-cap card-icon"></i>
-                    <h4>Join as MS/PhD Student</h4>
-                    <p>
-                      Applications are open for MS and PhD positions in Artificial Intelligence, Computer Vision, Wearable
-                      Sensors, and related areas.
-                    </p>
-                    <span className="join-option-btn">
-                      Apply Now <i className="fas fa-arrow-right"></i>
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-md-6 mb-4">
-                <a
-                  href={SITE.join.collaborator}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none", display: "block" }}
-                >
-                  <div className="join-option-card wow-card">
-                    <i className="fas fa-handshake card-icon"></i>
-                    <h4>Join as Collaborator</h4>
-                    <p>
-                      Interested in collaborating with IMC on research projects? Fill out the form and our team will reach
-                      out to you.
-                    </p>
-                    <span className="join-option-btn">
-                      Get in Touch <i className="fas fa-arrow-right"></i>
-                    </span>
-                  </div>
-                </a>
-              </div>
+            <div className="join-tabs">
+              <button
+                className={`join-tab-btn ${activeTab === "student" ? "join-tab-active" : ""}`}
+                onClick={() => setActiveTab("student")}
+              >
+                <i className="fas fa-graduation-cap" /> Join as MS/PhD Student
+              </button>
+              <button
+                className={`join-tab-btn ${activeTab === "collaborator" ? "join-tab-active" : ""}`}
+                onClick={() => setActiveTab("collaborator")}
+              >
+                <i className="fas fa-handshake" /> Join as Collaborator
+              </button>
+            </div>
+
+            <div className="join-form-container">
+              {activeTab === "student" ? (
+                <div className="join-form-section">
+                  <h3 className="join-form-title">
+                    <i className="fas fa-graduation-cap" /> MS/PhD Student Application
+                  </h3>
+                  <p className="join-form-subtitle">
+                    Applications are open for MS and PhD positions in Artificial Intelligence, Computer Vision,
+                    Wearable Sensors, and related areas.
+                  </p>
+                  <StudentForm />
+                </div>
+              ) : (
+                <div className="join-form-section">
+                  <h3 className="join-form-title">
+                    <i className="fas fa-handshake" /> Collaborator Application
+                  </h3>
+                  <p className="join-form-subtitle">
+                    Interested in collaborating with IMC on research projects? Fill out the form and our team will
+                    reach out to you.
+                  </p>
+                  <CollaboratorForm />
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
+
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(40px); }
           to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes glowPulse {
-          0% { box-shadow: 0 0 0 0 rgba(1,21,62,0.3); }
-          50% { box-shadow: 0 0 20px 4px rgba(1,21,62,0.15); }
-          100% { box-shadow: 0 0 0 0 rgba(1,21,62,0.3); }
         }
         @keyframes headerLineGrow {
           from { width: 0; }
@@ -89,67 +88,88 @@ export default function JoinUsPage() {
           border-radius: 4px; margin: 0 auto;
           animation: headerLineGrow 0.8s ease 0.3s both;
         }
-        .wow-card { animation: fadeInUp 0.7s ease both; }
-        .wow-card:nth-child(1) { animation-delay: 0.5s; }
-        .wow-card:nth-child(2) { animation-delay: 0.7s; }
-        .join-option-card {
-          background: #fff;
-          border: 1px solid #e6ecf5;
-          border-left: 4px solid #01153e;
-          border-radius: 16px;
-          padding: 36px 30px 30px;
-          text-align: center;
-          box-shadow: 0 6px 20px rgba(15,30,60,0.07);
-          transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 350ms ease;
-          height: 100%; position: relative; overflow: hidden;
+
+        .join-tabs {
+          display: flex; justify-content: center; gap: 12px; margin-bottom: 32px; flex-wrap: wrap;
         }
-        .join-option-card::before {
-          content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 4px;
-          background: linear-gradient(90deg, transparent, #c5a55a, transparent);
-          background-size: 200% 100%; transition: left 500ms ease;
+        .join-tab-btn {
+          padding: 12px 28px; border: 2px solid #e6ecf5; border-radius: 12px;
+          background: #fff; color: #01153e; font-size: 1rem; font-weight: 600;
+          cursor: pointer; transition: all 300ms ease; display: inline-flex; align-items: center; gap: 8px;
         }
-        .join-option-card:hover::before { left: 100%; }
-        .join-option-card:hover {
-          transform: translateY(-6px) scale(1.02);
-          box-shadow: 0 20px 40px rgba(1,21,62,0.18);
-          animation: glowPulse 1.5s ease infinite;
+        .join-tab-btn:hover {
+          border-color: #01153e; box-shadow: 0 4px 14px rgba(1,21,62,0.1);
         }
-        .card-icon {
-          font-size: 36px; color: #01153e; margin-bottom: 16px;
-          display: block; transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .join-option-card:hover .card-icon { transform: scale(1.25) rotate(-8deg); }
-        .join-option-card h4 {
-          color: #01153e; font-weight: 700; font-size: 1.2rem;
-          margin-bottom: 12px; transition: color 300ms ease;
-        }
-        .join-option-card:hover h4 {
-          background: linear-gradient(135deg, #01153e, #c5a55a);
-          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-        .join-option-card p {
-          color: #5a6478; font-size: 0.9rem; line-height: 1.6;
-          margin-bottom: 20px;
-        }
-        .join-option-btn {
-          display: inline-flex; align-items: center; gap: 8px;
-          padding: 10px 24px;
+        .join-tab-active {
           background: linear-gradient(135deg, #01153e 0%, #1a3a6e 100%);
-          color: #fff !important; border-radius: 8px;
-          font-size: 14px; font-weight: 600;
-          box-shadow: 0 4px 14px rgba(1,21,62,0.30);
-          transition: all 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
-          position: relative; overflow: hidden;
+          color: #fff !important; border-color: #01153e;
+          box-shadow: 0 6px 20px rgba(1,21,62,0.25);
         }
-        .join-option-btn i { font-size: 13px; transition: transform 350ms ease; position: relative; z-index: 1; }
-        .join-option-card:hover .join-option-btn {
-          background: #c5a55a;
-          color: #01153e !important;
-          transform: scale(1.05);
-          box-shadow: 0 6px 20px rgba(197,165,90,0.40);
+
+        .join-form-container {
+          animation: fadeInUp 0.5s ease both;
         }
-        .join-option-card:hover .join-option-btn i { transform: translateX(6px); }
+        .join-form-section {
+          background: #fff; border: 1px solid #e6ecf5; border-radius: 16px;
+          padding: 36px 32px; box-shadow: 0 6px 20px rgba(15,30,60,0.07);
+        }
+        .join-form-title {
+          font-size: 1.4rem; font-weight: 700; color: #01153e; margin: 0 0 8px 0;
+          display: flex; align-items: center; gap: 10px;
+        }
+        .join-form-title i { color: #c5a55a; }
+        .join-form-subtitle {
+          color: #5a6478; font-size: 0.9rem; line-height: 1.6; margin: 0 0 24px 0;
+        }
+
+        .join-native-form { display: flex; flex-direction: column; gap: 16px; }
+        .join-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 575px) { .join-form-row { grid-template-columns: 1fr; } }
+        .join-form-group { display: flex; flex-direction: column; gap: 4px; }
+        .join-form-group label {
+          font-size: 0.85rem; font-weight: 600; color: #01153e;
+        }
+        .join-required { color: #ef4444; }
+        .join-form-group input,
+        .join-form-group select,
+        .join-form-group textarea {
+          padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 8px;
+          font-size: 0.9rem; font-family: inherit; transition: border-color 200ms ease;
+          background: #fafbfc;
+        }
+        .join-form-group input:focus,
+        .join-form-group select:focus,
+        .join-form-group textarea:focus {
+          outline: none; border-color: #01153e; box-shadow: 0 0 0 3px rgba(1,21,62,0.08);
+          background: #fff;
+        }
+        .join-form-group textarea { resize: vertical; }
+
+        .join-form-btn {
+          padding: 12px 28px; border: none; border-radius: 10px;
+          background: linear-gradient(135deg, #01153e 0%, #1a3a6e 100%);
+          color: #fff; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+          display: inline-flex; align-items: center; gap: 8px; justify-content: center;
+          transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+          box-shadow: 0 4px 14px rgba(1,21,62,0.30); align-self: flex-start;
+        }
+        .join-form-btn:hover:not(:disabled) {
+          background: #c5a55a; color: #01153e;
+          transform: scale(1.03); box-shadow: 0 6px 20px rgba(197,165,90,0.40);
+        }
+        .join-form-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+        .join-form-success {
+          text-align: center; padding: 40px 20px;
+        }
+        .join-form-success h4 { color: #01153e; font-weight: 700; margin: 0 0 8px 0; }
+        .join-form-success p { color: #5a6478; font-size: 0.9rem; }
+
+        .join-form-error {
+          padding: 10px 16px; background: #fef2f2; border: 1px solid #fecaca;
+          border-radius: 8px; color: #dc2626; font-size: 0.85rem;
+          display: flex; align-items: center; gap: 8px;
+        }
       `}</style>
     </>
   );

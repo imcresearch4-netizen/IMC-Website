@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { members as allMembers, type Member } from "@/lib/data/members";
+import { alumni } from "@/lib/data/alumni";
 import { MEMBER_ROLES } from "@/constants/roles";
 import { JQUERY_UI_CSS_HREF, JQUERY_UI_JS_SRC, TABS_CSS_HREF, STUDENTS_CSS_HREF } from "@/config/assets";
 import { useTabs } from "@/hooks/useTabs";
@@ -16,7 +17,6 @@ export default function StudentsPage() {
   const phd = members.filter((m) => m.role === MEMBER_ROLES.phd);
   const ms = members.filter((m) => m.role === MEMBER_ROLES.ms);
   const ra = members.filter((m) => m.role === MEMBER_ROLES.researchAssistant);
-  const alumni = members.filter((m) => m.role === MEMBER_ROLES.alumni);
 
   const loading = members.length === 0;
 
@@ -92,10 +92,52 @@ export default function StudentsPage() {
               ]}
             />
             <div className="alumni-card-grid">
-              {loading ? (
-                <p className="text-center text-grey">Loading...</p>
+              {alumni.length === 0 ? (
+                <p className="text-center text-grey">No alumni found.</p>
               ) : (
-                alumni.map((m) => <MemberCard member={m} key={m.id} />)
+                alumni.map((a) => (
+                  <div className="ms-card" key={a.id}>
+                    <img
+                      className="ms-card-img"
+                      src={a.photo || "/Content/images/male-icon.webp"}
+                      alt={a.name}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div className="ms-card-name">{a.name}</div>
+                    {a.degree && (
+                      <div className="ms-card-topic-label" style={{ marginTop: "4px" }}>
+                        {a.degree}
+                      </div>
+                    )}
+                    {a.current_position && (
+                      <>
+                        <div className="ms-card-topic-label" style={{ marginTop: "6px" }}>
+                          Research Topic
+                        </div>
+                        <div className="ms-card-topic">{a.current_position}</div>
+                      </>
+                    )}
+                    {a.link && (
+                      <a
+                        href={a.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "5px",
+                          marginTop: "8px",
+                          fontSize: "0.72rem",
+                          color: "#60a5fa",
+                          textDecoration: "none",
+                        }}
+                      >
+                        <i className="fab fa-researchgate" /> ResearchGate
+                      </a>
+                    )}
+                  </div>
+                ))
               )}
             </div>
           </div>
